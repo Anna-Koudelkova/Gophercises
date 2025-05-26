@@ -2,18 +2,20 @@ package main
 
 import (
 	"encoding/csv"
+	"flag"
 	"fmt"
 	"os"
 	"strconv"
 )
 
 func main() {
+	quiz := flag.String("Quiz file","problems.csv","source file with the questions")
 	rightAnswers := 0
 	wrongAnswers := 0
 	var solution int
 
 	// read the CSV file 
-	file, err := os.Open("problems.csv")
+	file, err := os.Open(*quiz)
 	if err != nil{
 		fmt.Println("The file failed to read.")
 	}
