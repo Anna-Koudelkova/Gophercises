@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Adelka je sikovna holcicka")
 	quiz := flag.String("Quiz file","problems.csv","source file with the questions")
 	rightAnswers := 0
 	wrongAnswers := 0
